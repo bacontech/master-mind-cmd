@@ -15,6 +15,8 @@ class MasterMindMainTest {
     @CsvSource({
         "W, WHITE",
         "WHITE, WHITE",
+        "yellow, YELLOW",
+        "y, YELLOW",
         "Trash,",
     })
     void testDecodeString(String input, Color expected) {

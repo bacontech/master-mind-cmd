@@ -99,13 +99,13 @@ public class MasterMindMain {
     }
 
     static Color decodeString(String code) {
-        Color matchedEnum = Color.valueOfWithNulls(code);
+        String cap = code.toUpperCase(Locale.ROOT);
+        Color matchedEnum = Color.valueOfWithNulls(cap);
         if (matchedEnum != null) {
             return matchedEnum;
         }
 
 
-        String cap = code.toUpperCase(Locale.ROOT);
         if ("W".equals(cap)) {
            return Color.WHITE;
         } else if ("BK".equals(cap)) {
